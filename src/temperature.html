@@ -1,0 +1,35 @@
+<template>
+  <require from="./blur-image"></require>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">
+      <div class="col-sm-6 col-md-3 card-container au-animate">
+        <div class="card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <div class="avatar">
+            <img src="../images/pork-shoulder.jpg" crossorigin="anonymous" ref="image"/>
+          </div>
+          <div class="content">
+            <p class="name">Sensor 1</p>
+            <p class="temp-reading">81&#176; F</p>
+            <p class="target-temp">Target Temperature: 203&#176; F</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 card-container au-animate">
+        <div class="card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image2"></canvas>
+          <div class="avatar">
+            <img src="../images/smoker.jpg" crossorigin="anonymous" ref="image2"/>
+          </div>
+          <div class="content">
+            <p class="name">Sensor 2</p>
+            <p class="temp-reading">96&#176; F</p>
+            <p class="target-temp">Target Temperature: 225&#176; F</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
