@@ -1,10 +1,13 @@
+import {inject} from 'aurelia-framework';
+import {SettingsService} from 'settings-service';
+
+@inject(SettingsService)
 export class Settings {
     heading = 'Settings';
-    sensorOneName = 'Sensor 1';
-    sensorTwoName = 'Sensor 2';
-    sensorOneTarget = 0;
-    sensorTwoTarget = 0;
 
+    constructor(service) {
+      this.service = service;
+    }
 
     saveSettings(form) {
         console.log(form);
